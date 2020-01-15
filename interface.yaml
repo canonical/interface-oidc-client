@@ -1,0 +1,4 @@
+name: oidc-client
+summary: OpenID Connect client connection info
+version: 1
+repo: https://github.com/juju-solutions/interface-oidc-client
