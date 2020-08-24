@@ -14,4 +14,5 @@ class OidcClientRequirer(Endpoint):
             json.loads(unit.received_raw["client_info"])
             for relation in self.relations
             for unit in relation.joined_units
+            if unit.received_raw.get('client_info')
         ]
