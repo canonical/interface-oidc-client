@@ -11,8 +11,7 @@ class OidcClientRequirer(Endpoint):
 
     def get_config(self):
         return [
-            json.loads(unit.received_raw["client_info"])
+            json.loads(relation.joined_units.received_raw["client_info"])
             for relation in self.relations
-            for unit in relation.joined_units
-            if unit.received_raw.get('client_info')
+            if relation.joined_units.received_raw.get('client_info')
         ]
